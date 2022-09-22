@@ -75,7 +75,7 @@ class Running(Training):
         coeff_calorie_1 = 18
         coeff_calorie_2 = 20
         calorie = ((coeff_calorie_1 * self.get_mean_speed() - coeff_calorie_2)
-                  * self.weight / self.M_IN_KM * self.duration * self.minutes)
+                   * self.weight / self.M_IN_KM * self.duration * self.minutes)
 
         return calorie
 
@@ -101,9 +101,9 @@ class SportsWalking(Training):
         coeff_calorie_1 = 0.035
         coeff_calorie_2 = 0.029
         calorie = ((coeff_calorie_1 * self.weight
-                  + (self.get_mean_speed()**2 // self.height)
-                  * coeff_calorie_2 * self.weight)
-                  * self.duration * self.minutes)
+                   + (self.get_mean_speed()**2 // self.height)
+                   * coeff_calorie_2 * self.weight)
+                   * self.duration * self.minutes)
 
         return calorie
 
@@ -133,14 +133,14 @@ class Swimming(Training):
         coeff_calorie_1 = 1.1
         coeff_calorie_2 = 2
         calorie = ((self.get_mean_speed() + coeff_calorie_1)
-                  * coeff_calorie_2 * self.weight)
+                   * coeff_calorie_2 * self.weight)
 
         return calorie
 
     def get_mean_speed(self) -> float:
         """Получить среднюю скорость движения."""
         speed = (self.length_pool * self.count_pool
-                / self.M_IN_KM / self.duration)
+                 / self.M_IN_KM / self.duration)
 
         return speed
 
@@ -149,9 +149,9 @@ def read_package(workout_type: str, data: list) -> Training:
     """Прочитать данные полученные от датчиков."""
 
     code_class = {
-        'SWM': Swimming,
-        'RUN': Running,
-        'WLK': SportsWalking
+                 'SWM': Swimming,
+                 'RUN': Running,
+                 'WLK': SportsWalking
                   }
     type = code_class[workout_type](*data)
     return type
