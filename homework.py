@@ -1,6 +1,7 @@
 from dataclasses import dataclass, asdict
 from typing import Dict, Type, List
 
+
 @dataclass
 class InfoMessage:
     """Информационное сообщение о тренировке."""
@@ -15,7 +16,7 @@ class InfoMessage:
                 'Дистанция: {distance:.3f} км; '
                 'Ср. скорость: {speed:.3f} км/ч; '
                 'Потрачено ккал: {calories:.3f}.')
-
+                
     def get_message(self) -> str:
         return self.TEXT_MES.format(**asdict(self))
 
