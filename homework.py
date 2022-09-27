@@ -142,7 +142,7 @@ def read_package(workout_type: str, data: List[int]) -> Training:
         'RUN': Running,
         'WLK': SportsWalking
     }
-    code_list = ", ".join(code_class.keys())
+    code_list = ", ".join(code_class)
     if workout_type not in code_class:
         raise ValueError(f'{workout_type} - неизвестный тип тренировки;'
                          f' используйте: {code_list}')
@@ -159,7 +159,7 @@ if __name__ == '__main__':
     packages = [
         ('SWM', [720, 1, 80, 25, 40]),
         ('RUN', [15000, 1, 75]),
-        ('WLK', [9000, 1, 75, 180]),
+        ('WфK', [9000, 1, 75, 180]),
     ]
 
     for workout_type, data in packages:
