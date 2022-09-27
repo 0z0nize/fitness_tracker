@@ -6,16 +6,16 @@ from typing import Dict, List, Type
 class InfoMessage:
     """Информационное сообщение о тренировке."""
 
-    TRAINING_TYPE: str
-    DURATION: float
-    DISTANCE: float
-    SPEED: float
-    CALORIES: float
-    TEXT_MES: str = ('Тип тренировки: {TRAINING_TYPE}; '
-                     'Длительность: {DURATION:.3f} ч.; '
-                     'Дистанция: {DISTANCE:.3f} км; '
-                     'Ср. скорость: {SPEED:.3f} км/ч; '
-                     'Потрачено ккал: {CALORIES:.3f}.')
+    training_type: str
+    duration: float
+    distance: float
+    speed: float
+    calories: float
+    TEXT_MES: str = ('Тип тренировки: {training_type}; '
+                     'Длительность: {duration:.3f} ч.; '
+                     'Дистанция: {distance:.3f} км; '
+                     'Ср. скорость: {speed:.3f} км/ч; '
+                     'Потрачено ккал: {calories:.3f}.')
 
     def get_message(self) -> str:
         return self.TEXT_MES.format(**asdict(self))
@@ -36,9 +36,9 @@ class Training:
                  duration: float,
                  weight: float,
                  ) -> None:
-        self.action = action
-        self.duration = duration
-        self.weight = weight
+        self.ACTION = action
+        self.DURATION = duration
+        self.WEIGHT = weight
 
     def get_distance(self) -> float:
         """Получить дистанцию в км."""
@@ -91,7 +91,7 @@ class SportsWalking(Training):
                  height: float,
                  ) -> None:
         super().__init__(action, duration, weight)
-        self.height = height
+        self.HEIGHT = height
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
@@ -121,8 +121,8 @@ class Swimming(Training):
                  count_pool: float,
                  ) -> None:
         super().__init__(action, duration, weight)
-        self.length_pool = length_pool
-        self.count_pool = count_pool
+        self.LENGTH_POOL = length_pool
+        self.COUNT_POOL = count_pool
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
