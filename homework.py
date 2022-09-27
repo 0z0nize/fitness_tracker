@@ -106,7 +106,7 @@ class Swimming(Training):
 
     action: float
     duration: float
-    # weight: float
+    weight: float
     length_pool: float
     count_pool: float
     COEFF_CALORIE_1: float = 1.1
