@@ -24,9 +24,6 @@ class InfoMessage:
 class Training:
     """Базовый класс тренировки."""
 
-    action: float
-    duration: float
-    weight: float
     LEN_STEP: float = 0.65
     M_IN_KM: float = 1000
     MINUTES: float = 60
@@ -76,10 +73,6 @@ class Running(Training):
 class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
 
-    action: float
-    duration: float
-    weight: float
-    height: float
     COEFF_CALORIE_1: float = 0.035
     COEFF_CALORIE_2: float = 2
     COEFF_CALORIE_3: float = 0.029
@@ -104,11 +97,6 @@ class SportsWalking(Training):
 class Swimming(Training):
     """Тренировка: плавание."""
 
-    action: float
-    duration: float
-    weight: float
-    length_pool: float
-    count_pool: float
     COEFF_CALORIE_1: float = 1.1
     COEFF_CALORIE_2: float = 2
     LEN_STEP: float = 1.38
