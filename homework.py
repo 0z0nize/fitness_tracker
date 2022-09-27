@@ -36,9 +36,9 @@ class Training:
                  duration: float,
                  weight: float,
                  ) -> None:
-        self.ACTION = action
-        self.DURATION = duration
-        self.WEIGHT = weight
+        self.action = action
+        self.duration = duration
+        self.weight = weight
 
     def get_distance(self) -> float:
         """Получить дистанцию в км."""
@@ -64,8 +64,8 @@ class Training:
 class Running(Training):
     """Тренировка: бег."""
 
-    COEFF_CALORIE_1: int = 18
-    COEFF_CALORIE_2: int = 20
+    COEFF_CALORIE_1: float = 18
+    COEFF_CALORIE_2: float = 20
 
     def get_spent_calories(self) -> float:
         return ((self.COEFF_CALORIE_1 * self.get_mean_speed()
@@ -91,7 +91,7 @@ class SportsWalking(Training):
                  height: float,
                  ) -> None:
         super().__init__(action, duration, weight)
-        self.HEIGHT = height
+        self.height = height
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
@@ -121,8 +121,8 @@ class Swimming(Training):
                  count_pool: float,
                  ) -> None:
         super().__init__(action, duration, weight)
-        self.LENGTH_POOL = length_pool
-        self.COUNT_POOL = count_pool
+        self.length_pool = length_pool
+        self.count_pool = count_pool
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
@@ -159,7 +159,7 @@ if __name__ == '__main__':
     packages = [
         ('SWM', [720, 1, 80, 25, 40]),
         ('RUN', [15000, 1, 75]),
-        ('WфK', [9000, 1, 75, 180]),
+        ('WLK', [9000, 1, 75, 180]),
     ]
 
     for workout_type, data in packages:
