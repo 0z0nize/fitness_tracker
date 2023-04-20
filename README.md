@@ -1,4 +1,4 @@
-![imgbin_quick-guide-in-stretching-elasticity-and-muscle-tone-sport-psychology-physical-therapy-athlete-png](https://user-images.githubusercontent.com/112638163/233348522-5b0353ed-8415-4c84-ab0a-dc9706fbbb27.png)
+![Sport](https://user-images.githubusercontent.com/112638163/233348780-313ad8af-8fa5-47e0-8f1c-7f0aea8c24a3.png)
 # Модуль фитнес-трекера
 # Модуль расчета и отображения полной информации о тренировках по данным от блока датчиков.
 
