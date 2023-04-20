@@ -133,7 +133,7 @@ def main(training)
 ## Инструкции по установке
 ***- Клонируйте репозиторий:***
 ```
-git clone git@github.com:PashkaVRN/hw_python_oop.git
+git clone git@github.com/0z0nize/fitness_tracker.git
 ```
 
 ***- Установите и активируйте виртуальное окружение:***
