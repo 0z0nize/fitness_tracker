@@ -141,11 +141,11 @@ git clone git@github.com/0z0nize/fitness_tracker.git
 - для MacOS
 ```
 python3 -m venv venv
+source venv/bin/activate
 ```
 - для Windows
 ```
 python -m venv venv
-source venv/bin/activate
 source venv/Scripts/activate
 ```
 
