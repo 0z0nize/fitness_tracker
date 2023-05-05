@@ -26,5 +26,5 @@ source venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-### Автор проекта:
+### Автор проекта
 #### [_Владислав Шкаровский_](https://github.com/0z0nize)
